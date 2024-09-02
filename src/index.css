@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* font */
+@font-face {
+	font-family: c-font;
+	font-weight: 800;
+	src: url("../public/oswald.woff2");
+}
+@font-face {
+	font-family: c-font;
+	font-weight: 400;
+	src: url("../public/poppins.woff2");
+}
+
+/* bg color */
+.bg-color {
+	font-family: c-font;
+	background-color: #1f1f21;
+}
+
+.bg-color-card {
+	background-color: #28282a;
+}
+
+.bg-color-yellow {
+	background-color: #e3fc02;
+}
+/* text color */
+.text-color-yellow {
+	color: #e3fc02;
+}
+
+/* loading */
+.loading {
+	animation: loading 2s infinite;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 5px solid #e3fc02;
+	border-top-color: transparent;
+	margin: 200px auto;
+}
+@keyframes loading {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* product hover */
+.product img,
+.product div {
+	transition: all 200ms linear;
+}
+.product:hover div {
+	transform: translateY(-10px);
+}
+.product:hover div h3 {
+	text-decoration: underline;
+}
+
+.product:hover img {
+	scale: 1.05;
+	filter: brightness(120%);
+}
+
+/* blog details */
+.blog-back i {
+	transition: all 200ms linear;
+	color: #e3fc02;
+}
+.blog-back:hover i {
+	transform: translateX(-5px);
+}
